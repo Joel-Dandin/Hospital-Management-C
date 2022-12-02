@@ -19,6 +19,34 @@ struct Data
     int Serv;
     char Prescryption[200];
 };
+void clearscreen()
+{
+    #ifdef _WIN32
+	    system("cls");
+	#elif __linux__
+	    system("clear");
+    #elif __APPLE__	
+	    system("clear");
+	#elif __unix__
+	    system("clear");
+	#else
+	    return;
+	#endif
+}
+void pausescreen()
+{
+    #ifdef _WIN32
+	    system("pause");
+	#elif __linux__
+	    system("sleep 2");
+    #elif __APPLE__	
+	    system("clear");
+	#elif __unix__
+	    system("clear");
+	#else
+	    return;
+	#endif
+}
 void Loading_Screen()
 {
     int i;
@@ -29,7 +57,7 @@ void Loading_Screen()
             printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         printf("[--------------------------]%d%c",i*10,'%');
     sleep(1);
-    system("cls");
+    clearscreen();
     }
 
 }
@@ -387,6 +415,7 @@ void PrintpatientsData(int Security)
 
 
 }
+
 void main()
 {
     int ch, DoctorNo = 15 ,NoOfEachService = 2,DoctorSelect,Elements=25,Security=100;
@@ -397,8 +426,8 @@ void main()
 
     printf("\n\n\n\n\n\n\t\t\t\t\t\t\t        SJM Multi speciality Hospital \n\t\t\t\t\t\t\t\t\t\t\t-since ages\n");
     Cross();
-    sleep(5);
-    system("cls");
+    pausescreen();
+    clearscreen();
     Loading_Screen();
     while (1)
     {
@@ -408,7 +437,7 @@ void main()
 
         scanf("%d", &ch);
 
-        system("pause");
+        pausescreen();
 
         switch (ch)
         {
@@ -421,8 +450,8 @@ void main()
             PatientRecords(DArray,Elements);
             Loading_Screen();
             printf("Data inserted\n");
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             break;
         case 2:
             //Hospital schedule for the day
@@ -431,20 +460,20 @@ void main()
             scanf("%d",&FilePrint);
             if(FilePrint == 1)
                 HospitalscheduleFile(DataMatrix,DoctorNo);
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             break;
         case 3:
             // Module to Display patient record to appointed doctor
             PatientsData();
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             break;
         case 4:
             // Module to print patient record
             PrintpatientsData(Security);
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             break;
         case 5:
             //Display Doctors schedule for the day
@@ -454,8 +483,8 @@ void main()
             for(int i=0;i<24;i++)
                 printf("%d-%d\t%d\n",i,i+1,DataMatrix[DoctorSelect-1][i]);
             printf("Total\t%d\n",DataMatrix[DoctorSelect-1][24]);
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             break;
         case 6:
             //Setting
@@ -474,15 +503,15 @@ void main()
             else
                 printf("Wrong password\n");
 
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             break;
         case 7:
             exit(0);
         default:
             printf("Please Enter Valid options (1, 2, 3, 4, 5, 6)\n");
-            system("pause");
-            system("cls");
+            pausescreen();
+            clearscreen();
             goto A;
             break;
         }
