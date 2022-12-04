@@ -22,30 +22,30 @@ struct Data
 void clearscreen()
 {
     #ifdef _WIN32
-	    system("cls");
-	#elif __linux__
-	    system("clear");
+	system("cls");
+    #elif __linux__
+	system("clear");
     #elif __APPLE__	
-	    system("clear");
-	#elif __unix__
-	    system("clear");
-	#else
-	    return;
-	#endif
+	system("clear");
+    #elif __unix__
+	system("clear");
+    #else
+	return;
+    #endif
 }
 void pausescreen()
 {
     #ifdef _WIN32
-	    system("pause");
-	#elif __linux__
-	    system("sleep 2");
+        system("pause");
+    #elif __linux__
+        system("sleep 2");
     #elif __APPLE__	
-	    system("clear");
-	#elif __unix__
-	    system("clear");
-	#else
-	    return;
-	#endif
+        system("clear");
+    #elif __unix__
+        system("clear");
+    #else
+        return;
+    #endif
 }
 void Loading_Screen()
 {
