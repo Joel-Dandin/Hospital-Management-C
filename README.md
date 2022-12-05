@@ -11,6 +11,22 @@ GCC compiler
 gcc Hospital_Management.c -o Hospital_Management.exe
 ```
 
+
+For Linux/Mac
+
+GCC compiler
+```
+gcc Hospital_Management.c -o Hospital_Management.o
+```
+
+ICC compiler
+```
+icc Hospital_Management.c -o Hospital_Management.o
+```
+OR
+```
+icx Hospital_Management.c -o Hospital_Management.o
+```
 # Run Precompiled Binaries
 
 For Windows
@@ -22,5 +38,11 @@ Hospital_Management.exe
 Powershell
 ```
 &'.\Hospital_Management.exe'
+```
+
+For Linux/Mac
+
+```
+./Hospital_Management.o
 ```
 
