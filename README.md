@@ -2,9 +2,9 @@
 
 The basis DSA is used in this programme to manage the hospital schedule. It schedules patient appointments, doctor's appointments, room assignments, and many other things.
 
-# Compiling and running the program
+## Compiling and running the program
 
-For Windows
+### For Windows
 
 GCC compiler
 ```
@@ -12,7 +12,7 @@ gcc Hospital_Management.c -o Hospital_Management.exe
 ```
 
 
-For Linux/Mac
+### For Linux/Mac
 
 GCC compiler
 ```
@@ -27,9 +27,9 @@ OR
 ```
 icx Hospital_Management.c -o Hospital_Management.o
 ```
-# Run Precompiled Binaries
+## Run Precompiled Binaries
 
-For Windows
+### For Windows
 
 CMD
 ```
@@ -40,7 +40,7 @@ Powershell
 &'.\Hospital_Management.exe'
 ```
 
-For Linux/Mac
+### For Linux/Mac
 
 ```
 ./Hospital_Management.o
